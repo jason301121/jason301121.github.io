@@ -8,10 +8,12 @@ const content = document.querySelector(".content");
 const list = document.querySelector(".list");
 const clearButton = document.querySelector(".clear");
 const promptNum = document.querySelector(".promptNum");
-// let database =[
-// ];
-// localStorage.setItem("todolist", JSON.stringify(database));
+
 let data = JSON.parse(localStorage.getItem("todolist"));
+
+if(data===null){
+    let data_base=[];
+    localStorage.setItem("todolist",JSON.stringify('data_base));}                                                  
 
 //初始化
 function renderdata() {
