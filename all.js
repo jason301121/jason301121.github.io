@@ -8,34 +8,7 @@ const content = document.querySelector(".content");
 const list = document.querySelector(".list");
 const clearButton = document.querySelector(".clear");
 const promptNum = document.querySelector(".promptNum");
-let database =[{
-        "content": "把冰箱發霉的檸檬拿去丟",
-        "status": "uncomplete"
-    },
-    {
-        "content": "打電話叫媽媽匯款給我",
-        "status": "complete"
-    },
-    {
-        "content": "整理電腦資料夾",
-        "status": "uncomplete"
-    },
-    {
-        "content": "繳電費水費瓦斯費",
-        "status": "complete"
-    },
-    {
-        "content": "刪訊息",
-        "status": "uncomplete"
-    },
-    {
-        "content": "約vicky禮拜三泡溫泉",
-        "status": "uncomplete"
-    },
-    {
-        "content": "約ada禮拜四吃晚餐",
-        "status": "uncomplete"
-    }
+let database =[
 ];
 localStorage.setItem("todolist", JSON.stringify(database));
 let data = JSON.parse(localStorage.getItem("todolist"));
