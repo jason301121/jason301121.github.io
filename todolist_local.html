@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/todolist.css">
+</head>
+
+<body>
+    <h1>TODO LIST</h1>
+    <div class="wrap">
+        <span class="addList container">
+            <input type="text" class="txt" placeholder="新增待辦事項">
+            <input type="button" class="save pointer" value="+">
+        </span>
+
+        <div class="content container">
+            <ul class="nav">
+                <li class="nav_all active">全部</li>
+                <li class="nav_uncomplete">待完成</li>
+                <li class="nav_complete">已完成</li>
+            </ul>
+            <ul class="list"></ul>
+            <div class="footer">
+                <p class="promptNum"></p>
+                <input type="button" class="clear pointer" value="清除已完成項目">
+            </div>
+        </div>
+    </div>
+    <script src="/todolist_local.js"></script>
+</body>
+
+</html>
