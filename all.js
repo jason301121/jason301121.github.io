@@ -9,11 +9,14 @@ const list = document.querySelector(".list");
 const clearButton = document.querySelector(".clear");
 const promptNum = document.querySelector(".promptNum");
 
-let data = JSON.parse(localStorage.getItem("todolist"));
 
-if(data===null){
+
+if(JSON.parse(localStorage.getItem("todolist"))===null){
     let data_base=[];
-    localStorage.setItem("todolist",JSON.stringify('data_base));}                                                  
+    localStorage.setItem("todolist",JSON.stringify('data_base));
+  }else{
+ let data = JSON.parse(localStorage.getItem("todolist"));
+}
 
 //初始化
 function renderdata() {
