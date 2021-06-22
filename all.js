@@ -14,9 +14,9 @@ const promptNum = document.querySelector(".promptNum");
 if(JSON.parse(localStorage.getItem("todolist"))===null){
     let data_base=[];
     localStorage.setItem("todolist",JSON.stringify(data_base));
-  }else{
+  }
  let data = JSON.parse(localStorage.getItem("todolist"));
-}
+
 
 //初始化
 function renderdata() {
