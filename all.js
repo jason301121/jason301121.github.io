@@ -8,6 +8,8 @@ const content = document.querySelector(".content");
 const list = document.querySelector(".list");
 const clearButton = document.querySelector(".clear");
 const promptNum = document.querySelector(".promptNum");
+const enter = document.querySelector("#enter");
+
 
 
 
@@ -75,6 +77,7 @@ function renderdata() {
 renderdata();
 
 //新增待辦事項功能
+//點擊送出
 save.addEventListener("click", function(e) {
     if (txt.value == "") {
         alert("請輸入內容");
@@ -88,6 +91,22 @@ save.addEventListener("click", function(e) {
     txt.value = "";
     renderdata();
 });
+//enter送出
+enter.addEventListener("keypress", function(e) {
+    if (e.keyCode === 13) {
+        if (txt.value == "") {
+            alert("請輸入內容");
+            return;
+        }
+        //空物件插入輸入項目
+        let obj = { "content": txt.value, "status": "uncomplete" };
+        data.push(obj);
+        //新增項目導入暫存
+        localStorage.setItem("todolist", JSON.stringify(data));
+        txt.value = "";
+        renderdata();
+    }
+})
 
 
 //代辦事項功能(刪除,切換)
