@@ -97,7 +97,7 @@ enter.addEventListener("keypress", function(e) {
         if (txt.value == "") {
             alert("請輸入內容");
             return;
-        }
+        };
         //空物件插入輸入項目
         let obj = { "content": txt.value, "status": "uncomplete" };
         data.push(obj);
